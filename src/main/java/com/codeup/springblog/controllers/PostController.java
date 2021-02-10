@@ -8,11 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
 
 
-//    @GetMapping("/posts")
-//    @ResponseBody
-//    public String index(){
-//        return "posts index page";
-//    }
+
 
     @RequestMapping(path = "posts",method = RequestMethod.GET)
     @ResponseBody
