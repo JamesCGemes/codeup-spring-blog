@@ -2,7 +2,6 @@ package com.codeup.springblog.controllers;
 
 
 import com.codeup.springblog.models.Post;
-import jdk.dynalink.linker.LinkerServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +25,9 @@ public class PostController {
         postList.add(post01);
         postList.add(post02);
         postList.add(post03);
+
+        model.addAttribute("title","All the posts");
+        model.addAttribute("posts", postList);
 
         return "posts/index";
 
