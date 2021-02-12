@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="partials/header :: header-links"></head>
+<body>
+    <nav th:replace="partials/navbar :: navbar"></nav>
+
+    <h1>See all the posts below</h1>
+
+    <div th:each="post : ${posts}">
+        <h1 th:text="${post.title}"></h1>
+        <p th:text="${post.body}"></p>
+    </div>
+
+
+    <footer th:replace="partials/footer :: footer"></footer>
+<div th:replace="partials/scripts :: assets"></div>
+</body>
+</html>
