@@ -12,10 +12,14 @@ import java.util.List;
 @Controller
 public class PostController {
 
+    private final PostController postData;
+
+    public PostController(PostController postData) {
+        this.postData = postData;
+    }
 
 
-
-    @RequestMapping(path = "posts",method = RequestMethod.GET)
+    @GetMapping("/posts")
     public String postIndex(Model model){
         Post post01 = new Post("First Post", "My first post", 1);
         Post post02 = new Post("Second Post", "My second post", 2);
@@ -35,7 +39,7 @@ public class PostController {
 
 
 
-    @RequestMapping(path = "/posts/{id}", method = RequestMethod.GET)
+    @GetMapping("path/{id}")
     public String postView(Model model){
         Post post = new Post("First Post", "Post number 1", 1);
         model.addAttribute("title","Single Posts");
@@ -46,7 +50,8 @@ public class PostController {
 
 
 
-    @RequestMapping(path = "posts/create",method = RequestMethod.GET)
+//    @RequestMapping(path = "posts/create",method = RequestMethod.GET)
+    @GetMapping("posts/create")
     @ResponseBody
     public String createForm(){
         return "view form to create a post";
@@ -55,7 +60,8 @@ public class PostController {
 
 
 
-    @RequestMapping(path = "/posts/create",method = RequestMethod.POST)
+//    @RequestMapping(path = "/posts/create",method = RequestMethod.POST)
+    @PostMapping("/posts/create")
     @ResponseBody
     public String createPost(){
         return "create a new post";
