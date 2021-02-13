@@ -1,12 +1,15 @@
 body{
-    background-color: #03516F;
+    background-color: white;
 }
 
 .navbar{
-    border-bottom: 1px solid #A3DDCB;
-    background-color: #0A043C;
+    /*border-bottom: 1px solid #A3DDCB;*/
+    background-color: #1F212D;
 }
 
-.navbar{
+.navbar-brand{
+    background-color: #5FAAA8;
+    border-radius: 5px 15px;
+
 
 }
