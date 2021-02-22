@@ -89,3 +89,4 @@ Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus 
 
 Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 'holistic');
 insert into posts (body, title) values ('Phasellus in felis. Donec semper sapien a libero. Nam dui.', 'Assimilated');
+
