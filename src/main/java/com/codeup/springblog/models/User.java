@@ -21,18 +21,18 @@ public class User {
     private String email;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    List<Post> postsCreated;
+    private List<Post> postsCreated;
 
     public User(){
 
     }
 
-    public User(long id, String username, String password, String email, List<Post> postsCreated) {
+    public User(long id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
-        this.postsCreated = postsCreated;
+
     }
 
     public long getId() {
