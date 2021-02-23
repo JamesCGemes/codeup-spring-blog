@@ -1,9 +1,6 @@
-/*body{*/
-/*    background-color: white;*/
-/*}*/
+
 
 .navbar{
-    /*border-bottom: 1px solid #A3DDCB;*/
     background-color: #1F212D;
 }
 
@@ -14,10 +11,5 @@
 
 }
 
-html {
-  background: url("../../images/pexels-abdullah-ghatasheh-1631677.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
+

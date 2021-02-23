@@ -89,3 +89,17 @@ Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus 
 
 Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 'holistic');
 insert into posts (body, title) values ('Phasellus in felis. Donec semper sapien a libero. Nam dui.', 'Assimilated');
+
+insert into posts (body, title, user_id) VALUES ('2ndTest. Donec semper sapien a libero. Nam dui.', '2nd test', '2');
+
+
+insert into users (email, password, username) values ('bcornil0@amazon.co.uk', '9c86982d95552eeb75fa28f9a91f8f09', 'fstoddard0');
+insert into users (email, password, username) values ('dpincked1@ameblo.jp', 'a5228aba1d47073beb68952edfd56629', 'cslucock1');
+insert into users (email, password, username) values ('lcapron2@printfriendly.com', '09045cab604f6b412247d116b765b402', 'wakram2');
+insert into users (email, password, username) values ('njillings3@clickbank.net', '7de03581e13cfa5d57740ebd2c5ee89d', 'sjentgens3');
+insert into users (email, password, username) values ('mlebrun4@disqus.com', '446b30aa66166a62d2f02ff73af60c7a', 'rlaible4');
+insert into users (email, password, username) values ('rgreenhowe5@parallels.com', 'ed9bc3604467948442f1c4da059d0c30', 'bpilbeam5');
+insert into users (email, password, username) values ('agibbs6@tinyurl.com', 'f21fbb46ec217d47eb78579f10ae879b', 'lparamore6');
+insert into users (email, password, username) values ('salvar7@comcast.net', 'b515f1559e70f53a598217b4e06fcecb', 'khaliday7');
+insert into users (email, password, username) values ('wfairbank8@eepurl.com', '7579786d307770fa07223ccff39e0ec6', 'lschoffel8');
+insert into users (email, password, username) values ('jalam9@addthis.com', '9e3504fee12d2bed82e18374016306b3', 'xyokelman9');
