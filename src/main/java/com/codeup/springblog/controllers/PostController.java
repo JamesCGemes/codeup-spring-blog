@@ -38,6 +38,10 @@ public class PostController {
         model.addAttribute("post", post);
         return "posts/show";
     }
+
+
+
+
     @PostMapping("/posts/delete")
     public String deletePost(@RequestParam long id, Model model){
         postData.deleteById(id);
@@ -64,7 +68,19 @@ public class PostController {
         Post post = new Post();
         post.setTitle(title);
         post.setBody(body);
+        postData.save(post);
+        return "redirect:/posts/";
+    }
 
+    @GetMapping("posts/{id}/edit")
+    public String editPostForm(Model model, @PathVariable long id){
+        Post post = postData.getOne(id);
+        model.addAttribute("post", post);
+        return "/posts/edit";
+    }
+
+    @PostMapping(path = "posts/{id}/edit")
+    public String editPost(@ModelAttribute Post post){
         postData.save(post);
         return "redirect:/posts/";
     }
