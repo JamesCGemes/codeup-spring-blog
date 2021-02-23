@@ -50,9 +50,9 @@ public class PostController {
 
 
     @GetMapping("posts/create")
-    @ResponseBody
-    public String createForm(){
-        return "view form to create a post";
+    public String postForm(Model model){
+        model.addAttribute("post", new Post());
+        return "posts/create";
     }
 
 
@@ -60,10 +60,13 @@ public class PostController {
 
 
     @PostMapping("/posts/create")
-    @ResponseBody
-    public String createPost(){
-        return "create a new post";
-    }
+    public String createPost(@RequestParam String title,@RequestParam String body){
+        Post post = new Post();
+        post.setTitle(title);
+        post.setBody(body);
 
+        postData.save(post);
+        return "redirect:/posts/";
+    }
 
 }
