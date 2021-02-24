@@ -4,6 +4,7 @@ package com.codeup.springblog.controllers;
 import com.codeup.springblog.models.*;
 import com.codeup.springblog.repositories.PostRepository;
 import com.codeup.springblog.repositories.UserRepository;
+import com.codeup.springblog.services.EmailService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +17,12 @@ public class PostController {
 
     private final PostRepository postData;
     private final UserRepository userData;
+    private final EmailService emailService;
 
-    public PostController(PostRepository postData, UserRepository userData) {
+    public PostController(PostRepository postData, UserRepository userData, EmailService emailService) {
         this.postData = postData;
         this.userData = userData;
+        this.emailService = emailService;
     }
 
 
@@ -69,6 +72,7 @@ public class PostController {
         post.setTitle(title);
         post.setBody(body);
         postData.save(post);
+        emailService.prepareAndSend(post,"Good job", "you made a post"+ post.getTitle());
         return "redirect:/posts/";
     }
 
