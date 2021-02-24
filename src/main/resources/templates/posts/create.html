@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="partials/header :: header-links"></head>
-<body>
+<body id="grad">
 <nav th:replace="partials/navbar :: navbar"></nav>
 
 <div class="container">
-    <h1>Create Post</h1>
+    <h3 class="center-align">Create Post</h3>
 
     <form th:action="@{/posts/create}" th:method="POST" th:object="${post}">
         <div class="form-group">
@@ -17,12 +17,15 @@
             <textarea class="form-control" id="body" th:field="*{body}"></textarea>
         </div>
 
-        <button class="btn waves-effect #fb8c00 orange darken-1" type="submit" name="action">Submit
+        <button class="btn waves-effect #1a237e indigo darken-4" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
         </button>
     </form>
 
 </div>
+
+
+
 
 <div th:replace="partials/scripts :: assets"></div>
 </body>

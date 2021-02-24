@@ -1,3 +1,16 @@
 
 
 
+/*h3{*/
+/*    color: white;*/
+/*}*/
+
+#grad {
+    background-image: linear-gradient(90deg, #E2622A, #B90F29);
+}
+
+.nav-wrapper{
+    background-image: linear-gradient(90deg, #E2622A, #B90F29);
+    /*box-shadow:*/
+}
+

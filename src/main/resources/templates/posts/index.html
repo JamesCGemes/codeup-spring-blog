@@ -2,22 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="partials/header :: header-links"></head>
 <nav th:replace="partials/navbar :: navbar"></nav>
-<body>
+<body id="grad">
 
 
-
-    <h1>See all the posts below</h1>
-
+    <div>
+        <h3 class="center-align">See all the posts below</h3>
+    </div>
     <div class="row">
         <div class="col s12 m6 " th:each="post : ${posts}">
-            <div class="card #ffab40 orange accent-2">
-                <div class="card-content white-text">
-                    <span class="card-title" th:text="${post.title}"></span>
-                    <p th:text="${post.body}"></p>
+            <div class="card">
+                <div class="card-content black-text">
+                    <span class="card-title " th:text="${post.title}"></span>
+                    <p class="truncate" th:text="${post.body}"></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
+                    <a href="#">View Post</a>
                 </div>
             </div>
         </div>
