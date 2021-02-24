@@ -42,7 +42,7 @@ public class PostController {
 
 
 
-    @PostMapping("/posts/delete")
+    @GetMapping("/posts/delete")
     public String deletePost(@RequestParam long id, Model model){
         postData.deleteById(id);
         model.addAttribute("posts",postData.findAll());
@@ -84,5 +84,7 @@ public class PostController {
         postData.save(post);
         return "redirect:/posts/";
     }
+
+
 
 }
