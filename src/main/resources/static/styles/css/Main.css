@@ -6,11 +6,18 @@
 /*}*/
 
 #grad {
-    background-image: linear-gradient(90deg, #E2622A, #B90F29);
+    /*background-image: linear-gradient(90deg, #E2622A, #B90F29);*/
+    background: rgb(26,48,78);
+    background: linear-gradient(90deg, rgba(26,48,78,1) 2%, rgba(26,128,196,1) 50%, rgba(26,48,78,1) 98%);
 }
 
 .nav-wrapper{
-    background-image: linear-gradient(90deg, #E2622A, #B90F29);
-    /*box-shadow:*/
+    /*background-image: linear-gradient(90deg, #E2622A, #B90F29);*/
+    background: rgb(26,48,78);
+    background: linear-gradient(90deg, rgba(26,48,78,1) 2%, rgba(26,128,196,1) 50%, rgba(26,48,78,1) 98%);
 }
 
+.card {
+    background-color: rgba(245, 245, 245, 0.1);
+    /*border: solid .1rem black;*/
+}
