@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col s12 m6 " th:each="post : ${posts}">
-            <div class="card">
+            <div class="card z-depth-3">
                 <div class="card-content black-text">
                     <span class="card-title " th:text="${post.title}"></span>
                     <p class="truncate" th:text="${post.body}"></p>
