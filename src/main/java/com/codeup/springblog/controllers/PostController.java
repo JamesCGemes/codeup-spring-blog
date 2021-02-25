@@ -5,6 +5,7 @@ import com.codeup.springblog.models.*;
 import com.codeup.springblog.repositories.PostRepository;
 import com.codeup.springblog.repositories.UserRepository;
 import com.codeup.springblog.services.EmailService;
+import com.codeup.springblog.services.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +18,14 @@ public class PostController {
 
     private final PostRepository postData;
     private final UserRepository userData;
+    private final UserService userService;
     private final EmailService emailService;
 
-    public PostController(PostRepository postData, UserRepository userData, EmailService emailService) {
+    public PostController(PostRepository postData, UserRepository userData, EmailService emailService, UserService userService) {
         this.postData = postData;
         this.userData = userData;
         this.emailService = emailService;
+        this.userService = userService;
     }
 
 
@@ -68,7 +71,10 @@ public class PostController {
 
     @PostMapping("/posts/create")
     public String createPost(@RequestParam String title,@RequestParam String body){
+        User user = userService.loggedInUser();
+
         Post post = new Post();
+        post.setUser(user);
         post.setTitle(title);
         post.setBody(body);
         postData.save(post);
