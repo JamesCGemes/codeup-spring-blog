@@ -70,7 +70,8 @@ public class PostController {
 
 
     @PostMapping("/posts/create")
-    public String createPost(@RequestParam String title,@RequestParam String body){
+    public String createPost(@RequestParam String title,@RequestParam String body)
+    {
         User user = userService.loggedInUser();
 
         Post post = new Post();
