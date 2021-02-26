@@ -9,7 +9,7 @@ public class AuthController {
 
     @GetMapping("/login")
     public String displayLoginForm(){
-        return "users/login";
+        return "log-in";
     }
 
 
