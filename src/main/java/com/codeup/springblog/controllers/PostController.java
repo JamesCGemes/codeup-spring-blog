@@ -70,8 +70,9 @@ public class PostController {
 
 
     @PostMapping("/posts/create")
-    public String createPost(@RequestParam String title,@RequestParam String body){
-        User user = userService.loggedInUser();
+    public String createPost(@RequestParam String title,@RequestParam String body)
+    {
+        User user = userService.getLoggedInUser();
 
         Post post = new Post();
         post.setUser(user);
