@@ -4,6 +4,9 @@
 /*h3{*/
 /*    color: white;*/
 /*}*/
+body{
+    font-family: "Source Code Pro";
+}
 
 #grad {
     /*background-image: linear-gradient(90deg, #E2622A, #B90F29);*/
@@ -18,6 +21,7 @@
 }
 
 .card {
+    /*background-color: ;*/
     background-color: rgba(245, 245, 245, 0.1);
-    /*border: solid .1rem black;*/
+    border: solid .1rem black;
 }

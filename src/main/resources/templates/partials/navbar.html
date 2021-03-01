@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Navbar</title>
@@ -12,8 +12,27 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/posts">View All Post</a></li>
                 <li><a href="/posts/create">Create Post</a></li>
-                <li><a href="#">show post</a></li>
             </ul>
+            <ul sec:authorize="!isAuthenticated()" class="left">
+                <li><a href="/login">Log In</a></li>
+            </ul>
+            <ul sec:authorize="!isAuthenticated()"  class="right">
+            <li><a href="/sign-up">Sign Up</a></li>
+            </ul>
+<!--            <ul sec:authorize="isAuthenticated()" class="right">-->
+<!--                <li><a href="/logout">Log out</a></li>-->
+<!--            </ul>-->
+
+            <ul sec:authorize="isAuthenticated()" class="right">
+                <li>
+                    <form th:action="@{/logout}" th:method="post" th:hidden="true" name="logoutForm">
+<!--                        <button class="btn-link btn" style="margin-top: 8px">Logout</button>-->
+                        <input type="submit" value="Logout"/>
+                    </form>
+                    <a href="javascript: document.logoutForm.submit()">Logout</a>
+                </li>
+            </ul>
+
         </div>
     </nav>
 
