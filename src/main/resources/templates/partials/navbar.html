@@ -13,10 +13,10 @@
                 <li><a href="/posts">View All Post</a></li>
                 <li><a href="/posts/create">Create Post</a></li>
             </ul>
-            <ul sec:authorize="!isAuthenticated()" class="left">
+            <ul sec:authorize="!isAuthenticated()" class="left hide-on-med-and-down">
                 <li><a href="/login">Log In</a></li>
             </ul>
-            <ul sec:authorize="!isAuthenticated()"  class="right">
+            <ul sec:authorize="!isAuthenticated()"  class="right hide-on-med-and-down">
             <li><a href="/sign-up">Sign Up</a></li>
             </ul>
 <!--            <ul sec:authorize="isAuthenticated()" class="right">-->
