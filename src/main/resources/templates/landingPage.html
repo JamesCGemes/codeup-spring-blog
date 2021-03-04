@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5779c08c81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source-code-Pro">
+
+    <style>
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+        }
+        .section{
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        body{
+            background-color: #D0E4E0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper teal darken-4">
+            <div class="container">
+            <a href="#" class="brand-logo">JamesCGemes</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--                <li><a href="https://github.com/JamesCGemes">Github</a></li>-->
+                <li><a href="https://github.com/JamesCGemes"  ><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/james-gemes/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="https://github.com/JamesCGemes">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/james-gemes/">LinkedIn</a></li>
+    </ul>
+
+    <section class="container section" id="bio">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/codeup_10-20-0279.jpg" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>About me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut, earum eius eligendi et expedita hic illo, in mollitia nobis odit pariatur, perferendis quaerat quisquam reiciendis repudiandae ut. Magni, recusandae.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pexels-steve-johnson-3600814.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <section class="container section" id="blog-site">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/Screen%20Shot%202021-03-03%20at%203.25.47%20PM.png" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>The Blog</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut, earum eius eligendi et expedita hic illo, in mollitia nobis odit pariatur, perferendis quaerat quisquam reiciendis reptudiandae ut. Magni, recusandae.</p>
+                <a href="/blog">The Blog</a>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pexels-steve-johnson-2130474.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <section class="container section" id="coffee-site">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/Screen%20Shot%202021-03-04%20at%205_Fotor.png" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>Coffee!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut, earum eius eligendi et expedita hic illo, in mollitia nobis odit pariatur, perferendis quaerat quisquam reiciendis repudiandae ut. Magni, recusandae.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function (){
+           $('.sidenav').sidenav();
+           $('.materialboxed').materialbox();
+           $('.parallax').parallax();
+        });
+    </script>
+</body>
+</html>
