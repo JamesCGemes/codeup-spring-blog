@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5779c08c81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source-code-Pro">
+
+    <style>
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+        }
+        .section{
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        body{
+            background-color: #D0E4E0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper teal darken-4">
+            <div class="container">
+            <a href="#" class="brand-logo">JamesCGemes</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--                <li><a href="https://github.com/JamesCGemes">Github</a></li>-->
+                <li><a href="https://github.com/JamesCGemes"  ><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/james-gemes/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="https://github.com/JamesCGemes">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/james-gemes/">LinkedIn</a></li>
+    </ul>
+
+    <section class="container section" id="bio">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="images/codeup_10-20-0279.jpg" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>About me</h3>
+                <p>Dedicated military veteran and professional with years of experience in technical support and customer service. Experience in various sectors revealed a recurring theme around process improvement that inspired the transition into software development. The overall goal is to seek out ways to leverage technology to improve processes that create a better experience for the company, fellow employee, and customer.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/pexels-steve-johnson-3600814.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <section class="container section" id="blog-site">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="images/Screen%20Shot%202021-03-03%20at%203.25.47%20PM.png" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>The Blog</h3>
+                <p>A blog site where users can create an account create a post. Users can also view posts created by others. Full stack application built with Java, MySQL,
+                    Spring Boot, Thymeleaf, JavaScript/CSS/HTML.</p>
+                <a href="/posts">The Blog</a>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/pexels-steve-johnson-2130474.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <section class="container section" id="coffee-site">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="images/Screen%20Shot%202021-03-04%20at%205_Fotor.png" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>Coffee!</h3>
+                <p>Project utilized paired programming to create a website that allowed users to add and remove various coffee’s from a visual list. The list was also searchable and HTML, CSS, Javascript were used in this project.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function (){
+           $('.sidenav').sidenav();
+           $('.materialboxed').materialbox();
+           $('.parallax').parallax();
+        });
+    </script>
+</body>
+</html>

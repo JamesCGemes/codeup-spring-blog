@@ -21,14 +21,14 @@ public class UserController {
     }
 
     @GetMapping("/")
+//    public String home(){
+//        return "redirect:/posts";
+//    }
     public String home(){
-        return "redirect:/posts";
+        return "landingPage";
     }
 
-//    @GetMapping("/login")
-//    public String showLoginForm() {
-//        return "login";
-//    }
+
 
     @GetMapping("/sign-up")
     public String showSignUpForm(Model model) {
